@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My App</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'dishes', item.dishesId]">
+      <ion-label text-wrap>
+        <h3>{{ item.dishesName }}</h3>
+        {{ item.createdDate }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

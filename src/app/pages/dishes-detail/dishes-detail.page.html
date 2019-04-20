@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ information?.dishesName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card *ngIf="information">
+    <ion-card-header>
+      <ion-card-title>
+        {{ information.dishesName }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{ information.createdDate }}
+      </ion-card-subtitle>
+  <ion-button expand="block" routerLink="{{ information.dishesId }}" >
+   Login
+ </ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
